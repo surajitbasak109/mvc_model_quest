@@ -50,14 +50,9 @@ class Home extends Controller
     ));
   }
 
-  public function ajax_req( $name = "" )
+  public function ajax_req()
   {
-    $user = $this->model('User');
-    $user->name = $name;
-
-    $this->view('home/ajax_req', array(
-      "name" => $user->name,
-    ));
+    $this->view('home/ajax_req', [], false);
   }
 
   public function addUser() {

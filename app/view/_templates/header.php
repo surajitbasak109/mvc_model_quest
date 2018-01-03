@@ -21,6 +21,18 @@ if ( count($params) > 0 ) {
   $params_output .= ")";
 }
 
+function isCurrent($method, $subjArr)
+{
+    foreach ($subjArr as $subj) {
+        if ($subj === $method) {
+            $current = 'current';
+            return $current;
+        } else {
+            $current = 'not-current';
+        }
+    }
+    return $current;
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,16 +54,16 @@ if ( count($params) > 0 ) {
 
   <nav id="nav" class="site-navigation">
     <ul class="nav-group">
-      <li>
+      <li class="<?php echo isCurrent($method, ["index"]); ?>">
         <a href="<?php echo URL . 'home/index' ?>">Home</a>
       </li>
-      <li>
+      <li class="<?php echo isCurrent($method, ["list_all_users"]); ?>">
         <a href="<?php echo URL . 'home/list_all_users' ?>">Users</a>
       </li>
-      <li>
+      <li class="<?php echo isCurrent($method, ["add_user"]); ?>">
         <a href="<?php echo URL . 'home/add_user' ?>">Add User</a>
       </li>
-      <li>
+      <li class="<?php echo isCurrent($method, ["check_user"]); ?>">
         <a href="<?php echo URL . 'home/check_user' ?>">Check User</a>
       </li>
     </ul>

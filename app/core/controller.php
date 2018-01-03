@@ -25,10 +25,15 @@ class Controller
     return new $model($this->db);
   }
 
-  public function view( $view, $data = [] )
+  public function view( $view, $data = [], $template_option = true )
   {
-    require_once "../app/view/_templates/header.php";
-    require_once "../app/view/{$view}.php";
-    require_once "../app/view/_templates/footer.php";
+    if ($template_option === true) {
+      require_once "../app/view/_templates/header.php";
+      require_once "../app/view/{$view}.php";
+      require_once "../app/view/_templates/footer.php";
+    }
+    else {
+      require_once "../app/view/{$view}.php";
+    }
   }
 }

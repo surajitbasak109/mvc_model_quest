@@ -81,8 +81,6 @@ body {
 #wrap .site-content {
     min-height: 500px;
     background: #fff;
-    margin-top: 1em;
-    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding: 0.5em 1em;
 }
@@ -175,4 +173,10 @@ body {
     width: 410px;
     font-size: 1.1em;
     text-shadow: 0 1px 1px #b0ffed;
+}
+
+#nav li.current a {
+    background: white;
+    color: black;
+    border-bottom: transparent;
 }
