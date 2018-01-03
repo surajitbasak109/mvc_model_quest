@@ -159,14 +159,13 @@ body {
 .form-group input[type="submit"] {
     display: inline-block;
     padding: 0.5em 1em;
-    font-size: 1.2em;
+    font-size: 1em;
     background: #757575;
     vertical-align: middle;
     line-height: 1.5em;
     color: #eee;
     border-radius: 0.3em;
     cursor: pointer;
-    max-width: 100px;
 }
 
 .form-group .advice {

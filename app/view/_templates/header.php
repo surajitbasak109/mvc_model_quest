@@ -31,6 +31,7 @@ if ( count($params) > 0 ) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php echo $data['name']; ?></title>
   <link rel="stylesheet" href="<?php echo URL . 'css/style.css' ?>">
+  <script src="<?php echo URL . 'js/jquery-3.2.1.min.js' ?>"></script>
 </head>
 <body>
   <div id="wrap">

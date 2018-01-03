@@ -40,11 +40,27 @@ class Home extends Controller
     ));
   }
 
-  public function addUser() {
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+  public function check_user( $name = "" )
+  {
+    $user = $this->model('User');
+    $user->name = $name;
 
+    $this->view('home/check_user', array(
+      "name" => $user->name,
+    ));
+  }
+
+  public function ajax_req( $name = "" )
+  {
+    $user = $this->model('User');
+    $user->name = $name;
+
+    $this->view('home/ajax_req', array(
+      "name" => $user->name,
+    ));
+  }
+
+  public function addUser() {
     if ( isset( $_POST['add_user'] ) ) {
       $user = $this->model('User');
       if ( ! empty( $_POST['username'] ) && ! empty( $_POST['email'] ) ) {

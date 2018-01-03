@@ -4,4 +4,5 @@
       </footer>
     </div>
   </body>
+  <script src="<?php echo URL . 'js/app.js' ?>"></script>
 </html>
